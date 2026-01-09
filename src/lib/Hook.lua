@@ -1,9 +1,4 @@
---[[
 
-	Taking my methods 💖💖
-	I love a paster and a skid, puts disgust in my face
-
-]]
 
 local Hook = {
 	OriginalNamecall = nil,

@@ -1,9 +1,6 @@
 local Ui = {
 	DefaultEditorContent = [=[--[[
-	Sigma Spy, written by depso
-	Hooks rewritten and many more fixes!
-
-	Discord: https://discord.gg/bkUkm2vSbv
+	Sigma Spy, written by slade
 ]]]=],
 	LogLimit = 100,
     SeasonLabels = { 
@@ -74,7 +71,7 @@ type Log = {
 local SetClipboard = setclipboard or toclipboard or set_clipboard
 
 --// Libraries
-local ReGui = loadstring(game:HttpGet('https://github.com/depthso/Dear-ReGui/raw/refs/heads/main/ReGui.lua'), "ReGui")()
+local ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/zzz141632-png/liba/refs/heads/main/Dear-ReGui-main/ReGui.lua'), "ReGui")()
 
 --// Modules
 local Flags
@@ -553,13 +550,13 @@ function Ui:MakeOptionsTab(InfoSelector)
 				Text = "Join Discord",
 				Callback = function()
 					Process:PromptDiscordInvite("s9ngmUDWgb")
-					self:SetClipboard("https://discord.gg/s9ngmUDWgb")
+					self:SetClipboard("")
 				end,
 			},
 			{
 				Text = "Copy Github",
 				Callback = function()
-					self:SetClipboard("https://github.com/depthso/Sigma-Spy")
+					self:SetClipboard("")
 				end,
 			},
 			{

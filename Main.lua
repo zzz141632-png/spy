@@ -10,20 +10,15 @@
 	⣀⣴⣿⣿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 	⣿⣿⣟⣁⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀
 	⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-
-	@author depso (depthso)
-	@repo https://github.com/depthso
-	@license MIT
-	@description Sigma Remote Spy for Roblox
     
 	This file is COMPILED, check /src folder for the source
 	Build scripts are available in /build
 ]]
 
 local a,b={UseWorkspace=false,NoActors=false,FolderName='Sigma Spy',RepoUrl=
-[[https://raw.githubusercontent.com/depthso/Sigma-Spy/refs/heads/main]],
+[[https://raw.githubusercontent.com/zzz141632-png/spy/refs/heads/main]],
 ParserUrl=
-[[https://raw.githubusercontent.com/depthso/Roblox-parser/refs/heads/main/dist/Main.luau]]
+[[https://raw.githubusercontent.com/zzz141632-png/parser/refs/heads/main/main.lua]]
 },{...}local c=b[1]if typeof(c)=='table'then for d,e in c do a[d]=e end end
 local d=setmetatable({},{__index=function(d,e)local f=game:GetService(e)return
 cloneref(f)end})local e=(function()local e,f={UseWorkspace=false,Folder=
