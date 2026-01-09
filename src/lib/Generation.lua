@@ -74,18 +74,18 @@ end
 
 function Generation:Init(Data: table)
     local Modules = Data.Modules
-	local Configuration = Modules.Configuration
+    local Configuration = Modules.Configuration
 
-	--// Modules
-	Config = Modules.Config
-	Hook = Modules.Hook
-	Flags = Modules.Flags
-	
-	--// Import parser
-	local ParserUrl = Configuration.ParserUrl
-	self:LoadParser(ParserUrl)
+    Config = Modules.Config
+    Hook   = Modules.Hook
+    Flags  = Modules.Flags
+
+    ParserModule = loadstring(game:HttpGet(Configuration.ParserUrl), "Parser")()
+    ParserModule.Modules = ParserModule.Modules or {}
+    ParserModule.Modules.Formatter  = loadstring(game:HttpGet("https://raw.githubusercontent.com/zzz141632-png/parser/refs/heads/main/Formatter.lua"))()
+    ParserModule.Modules.Parser     = loadstring(game:HttpGet("https://raw.githubusercontent.com/zzz141632-png/parser/refs/heads/main/Parser.lua"))()
+    ParserModule.Modules.Variables  = ParserModule.Modules.Parser 
 end
-
 function Generation:MakePrintable(String: string): string
 	local Formatter = ParserModule.Modules.Formatter
 	return Formatter:MakePrintable(String)
