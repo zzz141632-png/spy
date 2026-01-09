@@ -51,7 +51,9 @@ end
 
 function Generation:MakePrintable(s) return ParserModule.Modules.Formatter:MakePrintable(s) end
 
-function Generation:MakeValueSwapsTable() return ParserModule.Modules.Formatter:MakeReplacements() end
+function Generation:MakeValueSwapsTable(ts)
+    return ParserModule.Modules.Formatter:MakeReplacements(ts)
+end
 
 function Generation:SetSwapsCallback(cb) self.SwapsCallback=cb end
 
@@ -242,3 +244,4 @@ function Generation:DumpLogs(logs)
 end
 
 return Generation
+
